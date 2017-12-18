@@ -1,36 +1,7 @@
 spring:
   application:
     # 指定服务名称
-    name: single-sign-on
+    name: sb-test
 
   profiles:
     active: dev
-
-# Eureka Client
-eureka:
-  client:
-    # 是否将自己注册到Eureka服务中, default: true
-    register-with-eureka: true
-    # 是否从Eureka中获取注册信息, default: true
-    fetch-registry: true
-    # Eureka client 与 server 交互地址(已配置安全认证)
-    service-url:
-      # 集群时, 可指定一个, 也可指定多个(","隔开)
-      defaultZone: http://administrator:omega@127.0.0.1:6868/eureka/
-  instance:
-    # 将ip注册到Eureka中
-    prefer-ip-address: true
-    # 指定本机ip通讯地址(无效, 待测)
-    ip-address: 127.0.0.1
-    # 指定实例id(${spring.cloud.client.ipAddress}:${server.port}或${spring.application.name}:${server.port},不推荐)
-    #instance-id:
-
-# Ribbon 负载均衡(是否可用${spring.application.name}待测)
-single-sign-on:
-  ribbon:
-    # 负载均衡策略:
-    # com.netflix.loadbalancer.ZoneAvoidanceRule: default, 复合判断server所在区域的性能和server的可用性, 选择server
-    # com.netflix.loadbalancer.RandomRule: 随机
-    # com.netflix.loadbalancer.RetryRule: 对选定的负载均衡策略, 重试机制
-    # com.netflix.loadbalancer.RoundRobinRule: 轮询
-    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.ZoneAvoidanceRule
