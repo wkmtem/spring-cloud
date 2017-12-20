@@ -11,6 +11,6 @@ spring:
     default-property-inclusion: non_null
 
 management:
-  # actuator安全认证(刷新yml配置文件需关闭)
+  # actuator安全认证(用于暴露MQ的端点)
   security:
     enabled: false

@@ -81,7 +81,7 @@
 			<artifactId>spring-boot-starter-actuator</artifactId>
 		</dependency>
 
-		<!-- 消息总线: RabbitMQ实现AMQP协议 -->
+		<!-- 消息总线: RabbitMQ实现AMQP协议, 由Config-Server负责同步 -->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-bus-amqp</artifactId>
