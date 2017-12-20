@@ -23,6 +23,14 @@ spring:
       # 分支(default: master)
       #label: master
 
+  # 消息总线
+  rabbitmq:
+    host: 139.196.195.162
+    # AMQP协议端口
+    port: 5672
+    # 超级管理员guest: guest
+    username: admin
+    password: admin
 
 # 请求配置文件的规则如下:
 # /{application}/{profile}/[label]
@@ -31,3 +39,13 @@ spring:
 # /{application}-{profile}.properties
 # /{label}/{application}-{profile}.properties
 # 其中{label}是指分支, default: master
+
+# 刷新功能, 需关闭actuator安全认证
+#management:
+#  # actuator安全认证(刷新yml配置文件需关闭)
+#  security:
+#    enabled: false
+# 手动刷新yml配置文件: POST application/x-www-form-urlencoded表单请求本项目ip:port/refresh
+# 自动刷新yml配置文件:
+# 1、借助与git的webhook(web钩子, 多个项目需配置多个钩子) http://ip:port/refresh
+# 2、Spring Cloud Bus 消息总线同步集群微服务(配置单个钩子 http://ip:port/bus/refresh)

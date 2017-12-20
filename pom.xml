@@ -81,6 +81,12 @@
 			<artifactId>spring-boot-starter-actuator</artifactId>
 		</dependency>
 
+		<!-- 消息总线: RabbitMQ实现AMQP协议 -->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-bus-amqp</artifactId>
+		</dependency>
+
 		<!-- okHttp 轻量级框架 -->
 		<dependency>
 			<groupId>com.squareup.okhttp3</groupId>
