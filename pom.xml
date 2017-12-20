@@ -70,6 +70,17 @@
 			<artifactId>spring-cloud-starter-feign</artifactId>
 		</dependency>
 
+		<!-- Cloud Config Client -->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-config</artifactId>
+		</dependency>
+		<!-- Cloud Config Client Refresh -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
+
 		<!-- okHttp 轻量级框架 -->
 		<dependency>
 			<groupId>com.squareup.okhttp3</groupId>

@@ -1,0 +1,33 @@
+# Eureka Client
+eureka:
+  client:
+    # 仅用于获取注册中心通讯地址
+    service-url:
+      # 集群时, 可指定一个, 也可指定多个(","隔开)
+      defaultZone: http://administrator:omega@127.0.0.1:7777/eureka/
+
+# Config Clientspring(优先级高于application.yml):
+spring:
+  cloud:
+    config:
+      # Config Server uri
+      #uri: http://127.0.0.1:6789/
+      # Config Server discovery
+      discovery:
+        enabled: true
+        service-id: interview-config-server
+      # {application}-{profile}.yml的{application}
+      name: application
+      # {application}-{profile}.yml的{profile}
+      profile: profile
+      # 分支(default: master)
+      #label: master
+
+
+# 请求配置文件的规则如下:
+# /{application}/{profile}/[label]
+# /{application}-{profile}.yml
+# /{label}/{application}-{profile}.yml
+# /{application}-{profile}.properties
+# /{label}/{application}-{profile}.properties
+# 其中{label}是指分支, default: master
