@@ -1,12 +1,11 @@
-# Eureka Client
+# Eureka Client 仅用于获取注册中心通讯地址
 eureka:
   client:
-    # 仅用于获取注册中心通讯地址
     service-url:
       # 集群时, 可指定一个, 也可指定多个(","隔开)
       defaultZone: http://administrator:omega@127.0.0.1:7777/eureka/
 
-# Config Clientspring(优先级高于application.yml):
+# Config Clientspring(优先级高于application.yml)
 spring:
   cloud:
     config:
@@ -17,9 +16,9 @@ spring:
         enabled: true
         service-id: interview-config-server
       # {application}-{profile}.yml的{application}
-      name: application
+      name: spring_cloud
       # {application}-{profile}.yml的{profile}
-      profile: profile
+      profile: local
       # 分支(default: master)
       #label: master
 

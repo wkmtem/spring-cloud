@@ -22,7 +22,7 @@ eureka:
     #instance-id:
 
 # Ribbon 负载均衡(是否可用${spring.application.name}待测)
-single-sign-on:
+sb-test:
   ribbon:
     # 负载均衡策略:
     # com.netflix.loadbalancer.ZoneAvoidanceRule: default, 复合判断server所在区域的性能和server的可用性, 选择server
